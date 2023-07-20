@@ -16,7 +16,7 @@ const InscriptionRevealedSchema = Type.Object({
   inscription_fee: Type.Integer(),
   inscription_id: Type.String(),
   inscription_output_value: Type.Integer(),
-  inscriber_address: Type.String(),
+  inscriber_address: Nullable(Type.String()),
   ordinal_number: Type.Integer(),
   ordinal_block_height: Type.Integer(),
   ordinal_offset: Type.Integer(),
@@ -32,23 +32,22 @@ const CursedInscriptionRevealedSchema = Type.Object({
   inscription_fee: Type.Integer(),
   inscription_id: Type.String(),
   inscription_output_value: Type.Integer(),
-  inscriber_address: Type.String(),
+  inscriber_address: Nullable(Type.String()),
   ordinal_number: Type.Integer(),
   ordinal_block_height: Type.Integer(),
   ordinal_offset: Type.Integer(),
   satpoint_post_inscription: Type.String(),
-  curse_type: Type.String(),
+  curse_type: Nullable(Type.Any()),
 });
 export type CursedInscriptionRevealed = Static<typeof CursedInscriptionRevealedSchema>;
 
 const InscriptionTransferredSchema = Type.Object({
-  inscription_number: Type.Integer(),
   inscription_id: Type.String(),
-  ordinal_number: Type.Integer(),
   updated_address: Nullable(Type.String()),
   satpoint_pre_transfer: Type.String(),
   satpoint_post_transfer: Type.String(),
   post_transfer_output_value: Nullable(Type.Integer()),
+  ordinal_number: Nullable(Type.Integer()),
 });
 export type InscriptionTransferred = Static<typeof InscriptionTransferredSchema>;
 
@@ -92,6 +91,7 @@ const ChainhookPayload = Type.Object({
       scope: Type.String(),
       operation: Type.String(),
     }),
+    is_streaming_blocks: Type.Boolean(),
   }),
 });
 export type ChainhookPayload = Static<typeof ChainhookPayload>;

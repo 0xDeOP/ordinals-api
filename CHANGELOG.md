@@ -1,3 +1,162 @@
+## [0.4.15](https://github.com/hirosystems/ordinals-api/compare/v0.4.14...v0.4.15) (2023-07-13)
+
+
+### Bug Fixes
+
+* introduce materialized view to count address inscriptions ([#147](https://github.com/hirosystems/ordinals-api/issues/147)) ([2e79311](https://github.com/hirosystems/ordinals-api/commit/2e793117afcafbd5f7578bc6b2435af7f33e7dd7))
+
+## [0.4.14](https://github.com/hirosystems/ordinals-api/compare/v0.4.13...v0.4.14) (2023-07-11)
+
+
+### Bug Fixes
+
+* mark intractable `/inscriptions` result counts as 0 to avoid DB bottlenecks ([#142](https://github.com/hirosystems/ordinals-api/issues/142)) ([2d1fa8f](https://github.com/hirosystems/ordinals-api/commit/2d1fa8f6b6062494ecd7900c5d74cd12abe7e32f))
+
+## [0.4.13](https://github.com/hirosystems/ordinals-api/compare/v0.4.12...v0.4.13) (2023-07-09)
+
+
+### Bug Fixes
+
+* ignore json content for current build ([#140](https://github.com/hirosystems/ordinals-api/issues/140)) ([909f79f](https://github.com/hirosystems/ordinals-api/commit/909f79f43b9c0a359c62c09858b244b8cba58c75))
+
+## [0.4.12](https://github.com/hirosystems/ordinals-api/compare/v0.4.11...v0.4.12) (2023-07-09)
+
+
+### Bug Fixes
+
+* move to many-to-many genesis and current table ([#139](https://github.com/hirosystems/ordinals-api/issues/139)) ([2b6b6ec](https://github.com/hirosystems/ordinals-api/commit/2b6b6eccd95bc24aa1e0e82a06d3ca36ddc2298f))
+
+## [0.4.11](https://github.com/hirosystems/ordinals-api/compare/v0.4.10...v0.4.11) (2023-07-09)
+
+
+### Bug Fixes
+
+* genesis and current locations using materialized view ([#138](https://github.com/hirosystems/ordinals-api/issues/138)) ([88edee4](https://github.com/hirosystems/ordinals-api/commit/88edee44586880f54c2e7d1c16f31d2b583ce216))
+
+## [0.4.10](https://github.com/hirosystems/ordinals-api/compare/v0.4.9...v0.4.10) (2023-07-08)
+
+
+### Bug Fixes
+
+* skip normalization for now ([#136](https://github.com/hirosystems/ordinals-api/issues/136)) ([85de25f](https://github.com/hirosystems/ordinals-api/commit/85de25f8c14288f426063da08bfb935d8ffb2aad))
+
+## [0.4.9](https://github.com/hirosystems/ordinals-api/compare/v0.4.8...v0.4.9) (2023-07-07)
+
+
+### Bug Fixes
+
+* patch ordinal number for transfers replay ([#134](https://github.com/hirosystems/ordinals-api/issues/134)) ([8d3fb5b](https://github.com/hirosystems/ordinals-api/commit/8d3fb5b23ad57e33ba22dea12afa33cb146de558))
+
+## [0.4.8](https://github.com/hirosystems/ordinals-api/compare/v0.4.7...v0.4.8) (2023-07-07)
+
+
+### Bug Fixes
+
+* allow multiple transfers per inscription per block ([#131](https://github.com/hirosystems/ordinals-api/issues/131)) ([9fee5ac](https://github.com/hirosystems/ordinals-api/commit/9fee5acb8185681fc95f0b85e9ae02810cf8b473))
+
+## [0.4.7](https://github.com/hirosystems/ordinals-api/compare/v0.4.6...v0.4.7) (2023-07-03)
+
+
+### Bug Fixes
+
+* expect any and stringify for curse_type ([#127](https://github.com/hirosystems/ordinals-api/issues/127)) ([0459115](https://github.com/hirosystems/ordinals-api/commit/0459115d44a4ad7143c08eb2a0225d2b1123769d))
+
+## [0.4.6](https://github.com/hirosystems/ordinals-api/compare/v0.4.5...v0.4.6) (2023-07-01)
+
+
+### Bug Fixes
+
+* process full block even on missing genesis ([#122](https://github.com/hirosystems/ordinals-api/issues/122)) ([edbf217](https://github.com/hirosystems/ordinals-api/commit/edbf217692756f87bc17fc35618ffe37b16fb92e))
+
+## [0.4.5](https://github.com/hirosystems/ordinals-api/compare/v0.4.4...v0.4.5) (2023-07-01)
+
+
+### Bug Fixes
+
+* remove inscription_number and ordinal_number from transfers ([#121](https://github.com/hirosystems/ordinals-api/issues/121)) ([a4cbeae](https://github.com/hirosystems/ordinals-api/commit/a4cbeaeab697d419a470caf9bf18229cc5dbed8a))
+
+## [0.4.4](https://github.com/hirosystems/ordinals-api/compare/v0.4.3...v0.4.4) (2023-06-30)
+
+
+### Bug Fixes
+
+* don't ping chainhook node if auto predicate reg is disabled ([#119](https://github.com/hirosystems/ordinals-api/issues/119)) ([f04445e](https://github.com/hirosystems/ordinals-api/commit/f04445efa5df5876d6f22b7d616bcadfe4d95b99))
+
+## [0.4.3](https://github.com/hirosystems/ordinals-api/compare/v0.4.2...v0.4.3) (2023-06-30)
+
+
+### Bug Fixes
+
+* create unique indexes for views for concurrent refresh ([#118](https://github.com/hirosystems/ordinals-api/issues/118)) ([58123cb](https://github.com/hirosystems/ordinals-api/commit/58123cbec9dda2b3c8cbddd8d8beb7751bed1c2d))
+
+## [0.4.2](https://github.com/hirosystems/ordinals-api/compare/v0.4.1...v0.4.2) (2023-06-30)
+
+
+### Bug Fixes
+
+* throw error on invalid chainhook payloads ([#117](https://github.com/hirosystems/ordinals-api/issues/117)) ([e639343](https://github.com/hirosystems/ordinals-api/commit/e63934319049bf950c58ef3bc6ba0ebb0b65b9c2))
+
+## [0.4.1](https://github.com/hirosystems/ordinals-api/compare/v0.4.0...v0.4.1) (2023-06-30)
+
+
+### Bug Fixes
+
+* skip expensive view refreshes when not streaming new blocks ([#116](https://github.com/hirosystems/ordinals-api/issues/116)) ([baec17c](https://github.com/hirosystems/ordinals-api/commit/baec17c51e3b5c4b6cb958b13dabb8c8c3de7a71))
+
+## [0.4.0](https://github.com/hirosystems/ordinals-api/compare/v0.3.3...v0.4.0) (2023-06-29)
+
+
+### Features
+
+* api ingestion metrics on prometheus ([#113](https://github.com/hirosystems/ordinals-api/issues/113)) ([10ec679](https://github.com/hirosystems/ordinals-api/commit/10ec679ca7607be849dd642178f5f170b104ff9b))
+
+
+### Bug Fixes
+
+* allow nullable and tagged curse types ([#111](https://github.com/hirosystems/ordinals-api/issues/111)) ([641a627](https://github.com/hirosystems/ordinals-api/commit/641a627453aa313c08c697c8cfa05f8277525b4c))
+* check for prod correctly when refreshing materialized views ([#112](https://github.com/hirosystems/ordinals-api/issues/112)) ([4518043](https://github.com/hirosystems/ordinals-api/commit/45180430d20cb77278d452be21963a9e53c5e557))
+* send 500 code if payload ingestion fails ([#114](https://github.com/hirosystems/ordinals-api/issues/114)) ([0a3fee2](https://github.com/hirosystems/ordinals-api/commit/0a3fee228d29843454be81ee29284195fbbe45f1))
+
+## [0.4.0-beta.1](https://github.com/hirosystems/ordinals-api/compare/v0.3.4-beta.2...v0.4.0-beta.1) (2023-06-28)
+
+
+### Features
+
+* api ingestion metrics on prometheus ([#113](https://github.com/hirosystems/ordinals-api/issues/113)) ([10ec679](https://github.com/hirosystems/ordinals-api/commit/10ec679ca7607be849dd642178f5f170b104ff9b))
+
+
+### Bug Fixes
+
+* allow nullable and tagged curse types ([#111](https://github.com/hirosystems/ordinals-api/issues/111)) ([641a627](https://github.com/hirosystems/ordinals-api/commit/641a627453aa313c08c697c8cfa05f8277525b4c))
+
+## [0.3.4-beta.2](https://github.com/hirosystems/ordinals-api/compare/v0.3.4-beta.1...v0.3.4-beta.2) (2023-06-28)
+
+
+### Bug Fixes
+
+* send 500 code if payload ingestion fails ([#114](https://github.com/hirosystems/ordinals-api/issues/114)) ([0a3fee2](https://github.com/hirosystems/ordinals-api/commit/0a3fee228d29843454be81ee29284195fbbe45f1))
+
+## [0.3.4-beta.1](https://github.com/hirosystems/ordinals-api/compare/v0.3.3...v0.3.4-beta.1) (2023-06-28)
+
+
+### Bug Fixes
+
+* check for prod correctly when refreshing materialized views ([#112](https://github.com/hirosystems/ordinals-api/issues/112)) ([4518043](https://github.com/hirosystems/ordinals-api/commit/45180430d20cb77278d452be21963a9e53c5e557))
+
+## [0.3.3](https://github.com/hirosystems/ordinals-api/compare/v0.3.2...v0.3.3) (2023-06-26)
+
+
+### Bug Fixes
+
+* allow genesis with null address ([#108](https://github.com/hirosystems/ordinals-api/issues/108)) ([9769028](https://github.com/hirosystems/ordinals-api/commit/9769028d9fc1366216cc858b503e27e0c6ec8b7d))
+
+## [0.3.2](https://github.com/hirosystems/ordinals-api/compare/v0.3.1...v0.3.2) (2023-06-26)
+
+
+### Bug Fixes
+
+* remove 0x prefix from outputs ([#107](https://github.com/hirosystems/ordinals-api/issues/107)) ([07c91b9](https://github.com/hirosystems/ordinals-api/commit/07c91b971f218bfb7b9615b282cefcffe0428648))
+
 ## [0.3.1](https://github.com/hirosystems/ordinals-api/compare/v0.3.0...v0.3.1) (2023-06-14)
 
 

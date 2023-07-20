@@ -124,10 +124,11 @@ const Chainhook: FastifyPluginCallback<Record<never, never>, Server, TypeBoxType
   fastify.post('/chainhook/inscription_feed', async (request, reply) => {
     try {
       await processInscriptionFeed(request.body, fastify.db);
+      await reply.code(200).send();
     } catch (error) {
       logger.error(error, `EventServer error processing inscription_feed`);
+      await reply.code(500).send();
     }
-    await reply.code(200).send();
   });
   done();
 };
@@ -146,9 +147,13 @@ export async function buildChainhookServer(args: { db: PgStore }) {
   }).withTypeProvider<TypeBoxTypeProvider>();
 
   fastify.decorate('db', args.db);
-  // fastify.addHook('onReady', waitForChainhookNode);
-  // fastify.addHook('onReady', registerChainhookPredicates);
-  fastify.addHook('onClose', removeChainhookPredicates);
+
+  if (ENV.CHAINHOOK_AUTO_PREDICATE_REGISTRATION) {
+    fastify.addHook('onReady', waitForChainhookNode);
+    fastify.addHook('onReady', registerChainhookPredicates);
+    fastify.addHook('onClose', removeChainhookPredicates);
+  }
+
   await fastify.register(Chainhook);
 
   return fastify;
